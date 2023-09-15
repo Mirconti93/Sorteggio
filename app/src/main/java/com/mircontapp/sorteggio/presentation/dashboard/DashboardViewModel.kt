@@ -1,4 +1,4 @@
-package com.mircontapp.sorteggio.ui.dashboard
+package com.mircontapp.sorteggio.presentation.dashboard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
