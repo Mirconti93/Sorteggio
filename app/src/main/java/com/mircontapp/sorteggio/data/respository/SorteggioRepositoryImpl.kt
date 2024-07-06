@@ -9,4 +9,8 @@ class SorteggioRepositoryImpl(val sorteggioDataSource: SorteggioDataSource): Sor
         return sorteggioDataSource.fetchTeams()
     }
 
+    override suspend fun addTeam(teamModel: TeamModel) {
+        sorteggioDataSource.insertTeam(teamModel)
+    }
+
 }
