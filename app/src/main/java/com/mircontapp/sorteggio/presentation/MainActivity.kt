@@ -15,9 +15,12 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
@@ -29,8 +32,10 @@ import com.mircontapp.sorteggio.R
 import com.mircontapp.sorteggio.databinding.ActivityMainBinding
 import com.mircontapp.sportalbum.presentation.navigation.NavGraph
 import com.mircontapp.sportalbum.presentation.navigation.NavigationItem
+import com.mircontapp.sportalbum.presentation.ui.theme.OrangeYellowD
 import com.mircontapp.sportalbum.presentation.ui.theme.SortTheme
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -68,6 +73,24 @@ class MainActivity : ComponentActivity() {
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         val navController = rememberNavController()
+
+                        Button(onClick = {},
+                            colors = ButtonDefaults.buttonColors(containerColor =  OrangeYellowD, contentColor = Color.Black)
+                        ) {
+                            Text(text = "Torneo")
+                        }
+
+                        Button(onClick = {},
+                            colors = ButtonDefaults.buttonColors(containerColor =  OrangeYellowD, contentColor = Color.Black)
+                        ) {
+                            Text(text = "Raggruppa")
+                        }
+
+                        Button(onClick = {},
+                            colors = ButtonDefaults.buttonColors(containerColor =  OrangeYellowD, contentColor = Color.Black)
+                        ) {
+                            Text(text = "Mischia")
+                        }
 
                         NavGraph(navController = navController)
                     }
